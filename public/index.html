@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="default-style">
+
+<head>
+  <title>CORE NE - App</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/fontawesome.css">
+  <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/linearicons.css">
+  <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/open-iconic.css">
+  <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/pe-icon-7-stroke.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/uikit.css">
+
+  <script src="<%= BASE_URL %>vendor/js/material-ripple.js"></script>
+  <script src="<%= BASE_URL %>vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="<%= BASE_URL %>vendor/js/theme-settings.js"></script>
+
+  <!-- Splash screen -->
+  <style>
+    .app-splash-screen {
+      background: #fff;
+      position: fixed;
+      display: block;
+      z-index: 99999999;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .app-splash-screen-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+    }
+    .app-splash-screen-content img {
+      width: 100%;
+      -webkit-animation: spin 1s linear infinite;
+      -moz-animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
+    }
+
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+  </style>
+  <!-- / Splash screen -->
+
+</head>
+
+<body>
+
+  <!-- Splash screen -->
+  <div class="app-splash-screen">
+    <div class="app-splash-screen-content">
+      <img src="/img/core-logo.png" alt="N Logo" />
+    </div>
+  </div>
+  <!-- / Splash screen -->
+
+  <div id="app"></div>
+</body>
+
+</html>

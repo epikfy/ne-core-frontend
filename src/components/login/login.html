@@ -1,0 +1,52 @@
+<section class="login">
+    <div class="authentication-wrapper authentication-1 px-4">
+        <div class="authentication-inner">
+
+            <b-card no-body :border-variant="loginFailed ? 'danger' : ''">
+                <b-card-header class="text-center">
+                    {{ $t('login.title') }}
+                </b-card-header>
+                <b-card-body>
+                    <validation-observer ref="observer" v-slot="{ passes }">
+                        <b-form @submit.prevent="passes(login)">
+                            <validation-provider name="E-mail" :rules="{ required: true, email: true }"
+                                                 v-slot="{ errors }">
+                                <b-form-group v-bind:label="$t('login.email')" class="position-relative">
+                                    <b-input
+                                            type="email"
+                                            v-model.trim="credentials.email"
+                                            v-bind:placeholder="$t('login.email')"
+                                            name="email"
+                                            id="email"
+                                            :state="errors[0] ? false : null"
+                                    />
+                                    <div class="invalid-tooltip">{{ errors[0] }}</div>
+                                </b-form-group>
+                            </validation-provider>
+
+                            <validation-provider name="Login Password" :rules="{ required: true, min: 6 }" v-slot="{ errors }">
+                                <b-form-group v-bind:label="$t('login.password')" class="position-relative">
+                                    <b-input
+                                            type="password"
+                                            v-model.trim="credentials.password"
+                                            v-bind:placeholder="$t('login.password')"
+                                            name="password"
+                                            id="password"
+                                            :state="errors[0] ? false : null"
+                                    />
+                                    <div class="invalid-tooltip">{{ errors[0] }}</div>
+                                </b-form-group>
+                            </validation-provider>
+
+                            <div class="d-flex justify-content-between align-items-center m-0">
+                                <b-button type="submit" variant="primary" :disabled="disableSubmit" name="signInButton">{{ $t('login.signIn') }}</b-button>
+                            </div>
+
+                        </b-form>
+                    </validation-observer>
+                </b-card-body>
+            </b-card>
+        </div>
+    </div>
+</section>
+
