@@ -3,7 +3,7 @@
     <!-- Brand demo (see demo.css) -->
     <b-navbar-brand to="/" class="app-brand demo d-lg-none py-0 mr-4">
       <span class="app-brand-logo">
-        <img :src="`${publicUrl}img/cellagon-logo.png`" class="d-block ui-w-20 rounded-circle" alt="Cellagon Logo">
+        <img :src="`${publicUrl}img/core-logo.png`" class="d-block ui-w-20 rounded-circle" alt="Core NE">
       </span>
       <span class="app-brand-text demo font-weight-normal ml-2">CORE</span>
     </b-navbar-brand>

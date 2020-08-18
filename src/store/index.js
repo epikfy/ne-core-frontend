@@ -16,7 +16,7 @@ import InvoiceList from './modules/InvoicesList'
 import Products from './modules/Products'
 
 // @TODO: CUANDO TODO ESTE EN SERVICIOS NO SE NECESITA LAS SIGUIENTES LINEAS DE AXIOS
-axios.defaults.baseURL = 'https://api.cellagon.teamq.biz/'
+axios.defaults.baseURL = 'http://api.ne-core.test/'
 
 let token = localStorage.getItem('user-token')
 if (token) {
